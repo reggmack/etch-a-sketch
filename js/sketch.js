@@ -23,7 +23,9 @@ function createGrid(numberPerRow) {
   const gridHover = document.querySelectorAll(".gridDiv");
   gridHover.forEach((box) =>
     box.addEventListener("mouseover", (e) => {
-      e.target.style.background = "lime";
+      const currentOpacity = Number(e.target.style.opacity);
+      e.target.style.background = `rgb(0, 0, 0)`;
+      e.target.style.opacity = currentOpacity + .1;
     })
   );
 }
@@ -34,7 +36,7 @@ const gridButton = document.querySelector("#gridButton");
 gridButton.addEventListener("click", () => {
   let gridSize;
   do {
-    gridSize = parseInt(prompt("Chhose a grid size less than 100"), 10);
+    gridSize = parseInt(prompt("Choose a grid size less than 100"), 10);
     const clear = document.querySelector(".container");
     clear.replaceChildren();
     createGrid(gridSize);
