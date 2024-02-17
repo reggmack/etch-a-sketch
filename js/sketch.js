@@ -23,23 +23,3 @@ gridHover.forEach(box => box.addEventListener('mouseover', e => {
     e.target.style.background = 'honeydew';
 }));
 
-const gridButton = document.querySelector('#gridButton');
-gridButton.addEventListener('click', () => {
-    /* let gridSize = parseInt(prompt('What size Grid would you like?'), 10);
-    if (gridSize <= 100) {
-      const clear = document.querySelector('.container');
-    clear.replaceChildren();
-    createGrid(gridSize);
-    } else {
-      alert('Grid size must be less than 100');
-      gridSize = parseInt(prompt('What size Grid would you like?'), 10);
-    }
-     */
-    let gridSize;
-    do {
-      gridSize = parseInt(prompt('Chhose a grid size less than 100'), 10);
-      const clear = document.querySelector('.container');
-    clear.replaceChildren();
-    createGrid(gridSize);
-    } while (isNaN(gridSize) || gridSize > 100 || gridSize < 1);
-});
