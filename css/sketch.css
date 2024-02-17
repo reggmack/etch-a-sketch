@@ -7,6 +7,6 @@
     flex-wrap: wrap;
 }
 
-/* .gridDiv:hover {
-    background-color: honeydew;
-} */
+#gridButton {
+    margin-bottom: 1.5em;
+}
