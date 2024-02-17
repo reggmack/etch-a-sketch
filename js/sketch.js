@@ -18,16 +18,16 @@ function createGrid(numberPerRow) {
     }
     container.appendChild(gridDiv);
   }
+
+  // Add hover effect
+  const gridHover = document.querySelectorAll(".gridDiv");
+  gridHover.forEach((box) =>
+    box.addEventListener("mouseover", (e) => {
+      e.target.style.background = "lime";
+    })
+  );
 }
 createGrid(16);
-
-// Add hover effect
-const gridHover = document.querySelectorAll(".gridDiv");
-gridHover.forEach((box) =>
-  box.addEventListener("mouseover", (e) => {
-    e.target.style.background = "honeydew";
-  })
-);
 
 // Add button to change grid size
 const gridButton = document.querySelector("#gridButton");
